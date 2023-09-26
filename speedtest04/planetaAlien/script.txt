@@ -12,6 +12,15 @@ use planetaalien;
 INSERT INTO usuario(nome,apelido,email,senha)
              VALUES('Cesar','Cesar','cesar@gmail.com','12345678');
 
+
+use planetaalien;
+INSERT INTO usuario(nome,apelido,email,senha)
+             VALUES('Paulo','PP','pedropaulo@gmail.com','987654321');
+
+use planetaalien;
+INSERT INTO usuario(nome,apelido,email,senha)
+             VALUES('Otavio','Otavio','otavio@gmail.com','987654321');
+
 describe usuario;
 SELECT apelido FROM usuario;
 
