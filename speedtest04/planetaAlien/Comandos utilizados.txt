@@ -27,3 +27,4 @@ DELETE FROM usuario WHERE id=2;
 
 describe usuario;
 UPDATE usuario SET apelido = 'PP' WHERE id = 2;
+
