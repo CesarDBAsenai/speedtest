@@ -1,0 +1,1 @@
+SELECT * FROM speedtest06.historiajogo;
