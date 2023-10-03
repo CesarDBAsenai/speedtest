@@ -73,7 +73,10 @@ INSERT INTO inscrito (fk_Turma_Cod_Disciplina, fk_Aluno_CodMatriculaAluno) VALUE
 (1,46);
 
 SELECT A.nome AS Nome, T.Nome_disciplina As Disciplina, T.Cod_Disciplina, T.Sala
-FROM Aluno A
+FROM Aluno A 
 INNER JOIN inscrito I ON A.CodMatriculaAluno = I.fk_Aluno_CodMatriculaAluno
-INNER JOIN Turma T ON I.fk_Turma_Cod_Disciplina = T.Cod_Disciplina;
+INNER JOIN Turma T ON I.fk_Turma_Cod_Disciplina = T.Cod_Disciplina
+ORDER BY A.nome;
+
+
 
