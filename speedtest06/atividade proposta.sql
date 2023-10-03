@@ -9,6 +9,9 @@ INSERT INTO Turma (Sala, Num_Turma) VALUES (102, 2);
 /*- Insira a coluna * nome disciplina* ;*/
 ALTER TABLE Turma ADD COLUMN nome_disciplina VARCHAR(120);
 
+UPDATE `atividade01`.`turma` SET `nome_disciplina` = 'DBA' WHERE (`Cod_Disciplina` = '1');
+UPDATE `atividade01`.`turma` SET `nome_disciplina` = 'Java' WHERE (`Cod_Disciplina` = '2');
+
 /* Atividade 03/10/2023 entregar projeto no git, SQL, modelo logico e conceitual;
 Inserir os dados
 cadastre 2 professores, sendo eles da unidade senai taguatinga DF
@@ -45,3 +48,32 @@ INSERT INTO Aluno (nome, ano, semestre) VALUES
 ('Henrique', 2023, 2),
 ('Julia', 2023, 2),
 ('Leonardo', 2023, 2);
+
+INSERT INTO inscrito (fk_Turma_Cod_Disciplina, fk_Aluno_CodMatriculaAluno) VALUES 
+(1,26),
+(1,27),
+(1,28),
+(1,29),
+(1,30),
+(1,31),
+(1,32),
+(1,33),
+(1,34),
+(1,35),
+(1,36),
+(1,37),
+(1,38),
+(1,39),
+(1,40),
+(1,41),
+(1,42),
+(1,43),
+(1,44),
+(1,45),
+(1,46);
+
+SELECT A.nome AS Nome, T.Nome_disciplina As Disciplina, T.Cod_Disciplina, T.Sala
+FROM Aluno A
+INNER JOIN inscrito I ON A.CodMatriculaAluno = I.fk_Aluno_CodMatriculaAluno
+INNER JOIN Turma T ON I.fk_Turma_Cod_Disciplina = T.Cod_Disciplina;
+
